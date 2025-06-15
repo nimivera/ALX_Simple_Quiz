@@ -6,11 +6,10 @@ function checkAnswer() {
     const userAnswer = document.querySelector('input[name="quiz"]:checked').value;
   
     // Compare the user's answer with the correct answer
-    const feedbackElement = document.getElementById('feedback');
     if (userAnswer === correctAnswer) {
-      feedbackElement.textContent = "Correct! Well done.";
+      document.getElementById('feedback').textContent = "Correct! Well done.";
     } else {
-      feedbackElement.textContent = "That's incorrect. Try again!";
+      document.getElementById('feedback').textContent = "That's incorrect. Try again!";
     }
   }
   
