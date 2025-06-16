@@ -24,6 +24,7 @@ function checkAnswer() {
 // Check if submit-answer button exists
 const submitButton = document.getElementById('submit-answer');
 if (submitButton) {
+
   submitButton.addEventListener('click', checkAnswer);
 } else {
   console.error("Submit button not found");
