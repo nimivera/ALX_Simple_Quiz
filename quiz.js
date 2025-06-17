@@ -1,31 +1,16 @@
-function checkAnswer() {
-  // Identify the correct answer
-  const correctAnswer = "4";
+function checkAnswer() {Add commentMore actions
+  const correctAnswer = '4' 
+  let userAnswer = document.querySelector('input[name="quiz"]:checked').value;
 
-  // Retrieve the user's answer
-  const userAnswerElement = document.querySelector('input[name="quiz"]:checked');
-  let userAnswer;
-  if (userAnswerElement) {
-      userAnswer = userAnswerElement.value;
-  } else {
-      document.getElementById('feedback').textContent = "Please select an answer.";
-      return;
-  }
+  const feedback = document.getElementById("feedback");
 
-  // Compare the user's answer with the correct answer
-  const feedbackElement = document.getElementById('feedback');
   if (userAnswer === correctAnswer) {
-      feedbackElement.textContent = "Correct! Well done.";
+      feedback.textContent = "Correct! Well done.";
   } else {
-      feedbackElement.textContent = "That's incorrect. Try again!";
+      feedback.textContent = "That's incorrect. Try again!";
   }
 }
 
-// Check if submit-answer button exists
-const submitButton = document.getElementById('submit-answer');
-if (submitButton) {
 
-  submitButton.addEventListener('click', checkAnswer);
-} else {
-  console.error("Submit button not found");
-}
+const submitButton = document.getElementById("submit-answer");
+submitButton.addEventListener("click", checkAnswer);
